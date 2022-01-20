@@ -20,11 +20,20 @@ nvm use && make
 
 ### Domain Entities
 
-> 🚧 Placeholder
+-   **Door** - An entry/exit point that can be the origin or destination of a person.
+-   **Floor** - One or more doors or lift doors can appear on a floor.
+-   **Lift Car**
+-   **Lift Door**
+-   **Lift Queue** - People who are waiting on a floor for a lift.
+-   **Lift Shaft** - Lift cars move up and down in this shaft.
+-   **Person** - Someone who will use a lift.
+-   **Scheduler** - Populates people though doors on a defined schedule.
+-   **Simulation** - Contains an initial state and series of rules that the system executes.
 
 ### Domain Use Cases
 
-> 🚧 Placeholder
+-   **Schedule Path** - Schedules a person to travel between two doors.
+-   **Tick** - Move the scenario forward one unit of time.
 
 ## License
 
