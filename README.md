@@ -88,7 +88,9 @@ make format
 
 ## References
 
--   [Setting up esbuild for TypeScript libraries](https://jamesthom.as/2021/05/setting-up-esbuild-for-typescript-libraries/)
+-   [2021-02-15: How can I serve static html from spring boot?](https://stackoverflow.com/questions/42393211#answer-48862637)
+-   [2021-02-15: Serve Static Resources with Spring](https://www.baeldung.com/spring-mvc-static-resources)
+-   [2021-02-15: Setting up esbuild for TypeScript libraries](https://jamesthom.as/2021/05/setting-up-esbuild-for-typescript-libraries/)
 
 ## License
 
