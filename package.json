@@ -1,10 +1,17 @@
 {
   "scripts": {
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js,tsx,jsx}'",
+    "build": "node esbuild.config.js",
     "format": "sort-package-json && pnpm run _prettier -- --write",
     "lint": "sort-package-json --check && pnpm run _prettier -- --check"
   },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
   "devDependencies": {
+    "esbuild": "0.14.21",
+    "esbuild-node-externals": "1.4.1",
     "prettier": "2.5.1",
     "sort-package-json": "1.53.1"
   }

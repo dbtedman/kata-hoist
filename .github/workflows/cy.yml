@@ -30,4 +30,5 @@ jobs:
                   cache: "gradle"
             - run: "make install"
             - run: "make lint"
+            - run: "make compile"
             - run: "make test"
