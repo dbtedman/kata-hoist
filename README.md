@@ -20,6 +20,18 @@ Lift simulation.
 nvm use && make
 ```
 
+Run SPA in development mode.
+
+```shell
+pnpm run dev
+```
+
+In another terminal window, start Spring BFF.
+
+```shell
+./gradlew bootRun
+```
+
 ## Verification
 
 ### Linting

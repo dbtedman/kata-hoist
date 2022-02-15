@@ -1,7 +1,9 @@
 {
   "scripts": {
+    "_esbuild": "esbuild ./src/main/ts/app.tsx --bundle --minify --platform=browser --sourcemap --target=es6",
     "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js,tsx,jsx}'",
-    "build": "node esbuild.config.js",
+    "build": "pnpm run _esbuild -- --outfile=build/resources/main/static/bundle.min.js",
+    "dev": "pnpm run _esbuild -- --outfile=www/bundle.min.js --servedir=www",
     "format": "sort-package-json && pnpm run _prettier -- --write",
     "lint": "sort-package-json --check && pnpm run _prettier -- --check"
   },
@@ -11,7 +13,6 @@
   },
   "devDependencies": {
     "esbuild": "0.14.21",
-    "esbuild-node-externals": "1.4.1",
     "prettier": "2.5.1",
     "sort-package-json": "1.53.1"
   }

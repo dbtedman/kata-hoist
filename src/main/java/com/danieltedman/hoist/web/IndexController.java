@@ -6,10 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
-    @GetMapping("/")
+    @GetMapping(path = {"/{path:^(?!api|static).*}", "/"})
     public ResponseEntity<String> index() {
-        // TODO: Switch this to loading an index.html page that references the compiled js
-        // TODO: Match all GET requests that are not /api/** or /static/**
-        return ResponseEntity.ok("Hello, World!");
+        return ResponseEntity.ok("<DOCTYPE html>" +
+            "<html>" +
+            "<head>" +
+            "<script src='http://localhost:8000/bundle.min.js'></script>" +
+            "</head>" +
+            "</html>");
     }
 }
