@@ -4,3 +4,7 @@
 
 # Don't touch IDE configuraiton
 /.idea/
+
+# Don't touch build output
+/build/
+/dist/
