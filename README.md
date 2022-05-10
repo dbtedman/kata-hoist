@@ -54,24 +54,24 @@ make format
 
 ### Domain Entities
 
-| Entity                                                                          | Notes                                                                   |
-| :------------------------------------------------------------------------------ | :---------------------------------------------------------------------- |
-| Door                                                                            | An entry/exit point that can be the origin or destination of a person.  |
-| Floor                                                                           | One or more doors or lift doors can appear on a floor.                  |
-| LiftCar                                                                         |                                                                         |
-| LiftDoor                                                                        |                                                                         |
-| LiftQueue                                                                       | People who are waiting on a floor for a lift.                           |
-| LiftShaft                                                                       | Lift cars move up and down in this shaft.                               |
-| Person                                                                          | Someone who will use a lift.                                            |
-| Scheduler                                                                       | Populates people though doors on a defined schedule.                    |
-| [Simulation](./src/main/java/com/danieltedman/hoist/internal/domain/simulation) | Contains an initial state and series of rules that the system executes. |
+| Entity                                                                           | Notes                                                                   |
+| :------------------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+| [Door](./src/main/java/com/danieltedman/hoist/internal/domain/door/)             | An entry/exit point that can be the origin or destination of a person.  |
+| [Floor](./src/main/java/com/danieltedman/hoist/internal/domain/floor/)           | One or more doors or lift doors can appear on a floor.                  |
+| [Lift Car](./src/main/java/com/danieltedman/hoist/internal/domain/liftcar/)      |                                                                         |
+| [Lift Door](./src/main/java/com/danieltedman/hoist/internal/domain/liftdoor/)    |                                                                         |
+| [Lift Queue](./src/main/java/com/danieltedman/hoist/internal/domain/liftqueue/)  | People who are waiting on a floor for a lift.                           |
+| [Lift Shaft](./src/main/java/com/danieltedman/hoist/internal/domain/liftshaft/)  | Lift cars move up and down in this shaft.                               |
+| [Person](./src/main/java/com/danieltedman/hoist/internal/domain/person/)         | Someone who will use a lift.                                            |
+| [Scheduler](./src/main/java/com/danieltedman/hoist/internal/domain/scheduler/)   | Populates people though doors on a defined schedule.                    |
+| [Simulation](./src/main/java/com/danieltedman/hoist/internal/domain/simulation/) | Contains an initial state and series of rules that the system executes. |
 
 ### Domain Use Cases
 
-| Use Case       | Notes                                           |
-| :------------- | :---------------------------------------------- |
-| `SchedulePath` | Schedules a person to travel between two doors. |
-| `Tick`         | Move the scenario forward one unit of time.     |
+| Use Case      | Notes                                           |
+| :------------ | :---------------------------------------------- |
+| Schedule Path | Schedules a person to travel between two doors. |
+| Tick          | Move the scenario forward one unit of time.     |
 
 ### Gateways
 
