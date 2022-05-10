@@ -1,10 +1,10 @@
 # Don't touch library code
 /node_modules/
 /pnpm-lock.yaml
+/.gradle/
 
 # Don't touch IDE configuraiton
 /.idea/
 
 # Don't touch build output
 /build/
-/dist/

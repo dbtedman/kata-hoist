@@ -1,19 +1,18 @@
 {
   "scripts": {
     "_esbuild": "esbuild ./src/main/ts/app.tsx --bundle --minify --platform=browser --sourcemap --target=es6",
-    "_prettier": "prettier './**/*.{md,yml,yaml,json,ts,js,tsx,jsx}'",
-    "build": "pnpm run _esbuild -- --outfile=build/resources/main/static/bundle.min.js",
-    "dev": "pnpm run _esbuild -- --outfile=www/bundle.min.js --servedir=www",
-    "format": "sort-package-json && pnpm run _prettier -- --write",
-    "lint": "sort-package-json --check && pnpm run _prettier -- --check"
+    "build": "pnpm run _esbuild --outfile=build/resources/main/static/bundle.min.js",
+    "dev": "pnpm run _esbuild --outfile=www/bundle.min.js --servedir=www",
+    "format": "sort-package-json && prettier . --write",
+    "lint": "sort-package-json --check && prettier . --check"
   },
   "dependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "esbuild": "0.14.21",
-    "prettier": "2.5.1",
-    "sort-package-json": "1.53.1"
+    "esbuild": "0.14.38",
+    "prettier": "2.6.2",
+    "sort-package-json": "1.57.0"
   }
 }
