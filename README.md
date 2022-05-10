@@ -54,17 +54,17 @@ make format
 
 ### Domain Entities
 
-| Entity       | Notes                                                                   |
-| :----------- | :---------------------------------------------------------------------- |
-| `Door`       | An entry/exit point that can be the origin or destination of a person.  |
-| `Floor`      | One or more doors or lift doors can appear on a floor.                  |
-| `LiftCar`    |                                                                         |
-| `LiftDoor`   |                                                                         |
-| `LiftQueue`  | People who are waiting on a floor for a lift.                           |
-| `LiftShaft`  | Lift cars move up and down in this shaft.                               |
-| `Person`     | Someone who will use a lift.                                            |
-| `Scheduler`  | Populates people though doors on a defined schedule.                    |
-| `Simulation` | Contains an initial state and series of rules that the system executes. |
+| Entity                                                                          | Notes                                                                   |
+| :------------------------------------------------------------------------------ | :---------------------------------------------------------------------- |
+| Door                                                                            | An entry/exit point that can be the origin or destination of a person.  |
+| Floor                                                                           | One or more doors or lift doors can appear on a floor.                  |
+| LiftCar                                                                         |                                                                         |
+| LiftDoor                                                                        |                                                                         |
+| LiftQueue                                                                       | People who are waiting on a floor for a lift.                           |
+| LiftShaft                                                                       | Lift cars move up and down in this shaft.                               |
+| Person                                                                          | Someone who will use a lift.                                            |
+| Scheduler                                                                       | Populates people though doors on a defined schedule.                    |
+| [Simulation](./src/main/java/com/danieltedman/hoist/internal/domain/simulation) | Contains an initial state and series of rules that the system executes. |
 
 ### Domain Use Cases
 
