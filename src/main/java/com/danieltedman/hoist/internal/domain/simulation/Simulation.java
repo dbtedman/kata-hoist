@@ -5,7 +5,10 @@ import java.time.Instant;
 public class Simulation {
     private Instant whenStarted;
 
-    public void start() {
+    public void start() throws SimulationAlreadyStarted {
+        if (whenStarted != null) {
+            throw new SimulationAlreadyStarted();
+        }
         whenStarted = Instant.now();
     }
 
