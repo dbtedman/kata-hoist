@@ -12,25 +12,26 @@ on:
 jobs:
     snyk:
         runs-on: "ubuntu-latest"
+        # Snyk will already run on PRs as its own check, only looking at the changed
+        # dependencies instead of unchanged ones as this job will do.
+        if: github.event_name != 'pull_request'
 
         steps:
             - uses: "actions/checkout@v3"
             - uses: "pnpm/action-setup@v2.0.1"
               with:
                   version: "latest"
+            - uses: "snyk/actions/setup@master"
             - uses: "actions/setup-node@v2"
               with:
                   node-version-file: ".nvmrc"
                   cache: "pnpm"
             - run: "make install"
-            - uses: "snyk/actions/node@master"
-              continue-on-error: true
+            - run: "snyk test --all-projects"
               env:
                   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-              with:
-                  command: "monitor"
 
-    analyze:
+    codeql:
         runs-on: "ubuntu-latest"
 
         permissions:
@@ -38,15 +39,23 @@ jobs:
             contents: read
             security-events: write
 
-        strategy:
-            fail-fast: false
-            matrix:
-                language: ["javascript"]
-
         steps:
             - uses: "actions/checkout@v3"
             - uses: "github/codeql-action/init@v2"
               with:
-                  languages: ${{ matrix.language }}
-            - uses: "github/codeql-action/autobuild@v2"
+                  languages: "java, javascript"
+            - uses: "pnpm/action-setup@v2.0.1"
+              with:
+                  version: "latest"
+            - uses: "actions/setup-node@v2"
+              with:
+                  node-version-file: ".nvmrc"
+                  cache: "pnpm"
+            - uses: "actions/setup-java@v2"
+              with:
+                  java-version: "17"
+                  distribution: "temurin"
+                  cache: "gradle"
+            - run: "make install"
+            - run: "make compile"
             - uses: "github/codeql-action/analyze@v2"

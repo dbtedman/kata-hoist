@@ -11,7 +11,7 @@ env:
     CI: true
 
 jobs:
-    run:
+    ci:
         runs-on: "ubuntu-latest"
 
         steps:
