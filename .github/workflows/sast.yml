@@ -1,0 +1,19 @@
+---
+name: "sast"
+
+on:
+    pull_request: {}
+    push:
+        branches:
+            - "main"
+
+jobs:
+    run:
+        runs-on: "ubuntu-20.04"
+
+        steps:
+            - uses: "actions/checkout@v2"
+            - uses: "snyk/actions/node@master"
+              continue-on-error: true
+              env:
+                  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
