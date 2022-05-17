@@ -2,7 +2,8 @@
 
 > ⚠️ WARNING: Not production ready code.
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dbtedman/kata-hoist/ci?style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/kata-hoist/actions/workflows/cy.yml)
+[![ci workflow status](https://img.shields.io/github/workflow/status/dbtedman/kata-hoist/ci?style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/kata-hoist/actions/workflows/ci.yml)
+[![sast workflow status](https://img.shields.io/github/workflow/status/dbtedman/kata-hoist/sast?style=for-the-badge&logo=github&label=sast)](https://github.com/dbtedman/kata-hoist/actions/workflows/sast.yml)
 ![languages: java and typescript](https://img.shields.io/badge/languages-java%20and%20typescript-blue.svg?style=for-the-badge)
 ![framework: react](https://img.shields.io/badge/frameworks-spring%20and%20react-blue.svg?style=for-the-badge)
 
