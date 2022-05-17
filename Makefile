@@ -12,7 +12,7 @@ format:
 	@pnpm run format
 
 compile:
-	@pnpm run build
+	@pnpm run build && ./gradlew build
 
 test:
 	@./gradlew test
