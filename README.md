@@ -1,4 +1,4 @@
-# [Kata](https://github.com/dbtedman/kata) // [Hoist](https://github.com/dbtedman/kata-hoist)
+# [Kata](https://github.com/dbtedman#code-kata) // [Hoist](https://github.com/dbtedman/kata-hoist)
 
 > ⚠️ WARNING: Not production ready code.
 
