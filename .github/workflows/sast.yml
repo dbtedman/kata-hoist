@@ -13,22 +13,25 @@ jobs:
     snyk:
         runs-on: "ubuntu-latest"
 
+        strategy:
+            fail-fast: false
+            matrix:
+                platform: ["node"]
+
         steps:
             - uses: "actions/checkout@v3"
             - uses: "pnpm/action-setup@v2.0.1"
               with:
                   version: "latest"
+            - uses: "snyk/actions/setup@master"
             - uses: "actions/setup-node@v2"
               with:
                   node-version-file: ".nvmrc"
                   cache: "pnpm"
             - run: "make install"
-            - uses: "snyk/actions/node@master"
-              continue-on-error: true
+            - run: "snyk test"
               env:
                   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-              with:
-                  command: "monitor"
 
     codeql:
         runs-on: "ubuntu-latest"
