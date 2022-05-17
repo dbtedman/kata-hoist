@@ -13,11 +13,6 @@ jobs:
     snyk:
         runs-on: "ubuntu-latest"
 
-        strategy:
-            fail-fast: false
-            matrix:
-                platform: ["node"]
-
         steps:
             - uses: "actions/checkout@v3"
             - uses: "pnpm/action-setup@v2.0.1"
@@ -41,16 +36,11 @@ jobs:
             contents: read
             security-events: write
 
-        strategy:
-            fail-fast: false
-            matrix:
-                language: ["java", "javascript"]
-
         steps:
             - uses: "actions/checkout@v3"
             - uses: "github/codeql-action/init@v2"
               with:
-                  languages: ${{ matrix.language }}
+                  languages: "java, javascript"
             - uses: "pnpm/action-setup@v2.0.1"
               with:
                   version: "latest"
