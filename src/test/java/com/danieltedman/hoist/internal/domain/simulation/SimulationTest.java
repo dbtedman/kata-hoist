@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,11 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class SimulationTest {
     @Test
     void testWhenStartedExistsWhenStartingSimulation() throws Throwable {
-        final Simulation aSimulation = new Simulation(
-            Collections.singletonList(
-                new Floor()
-            )
-        );
+        final var floors = Collections.singletonList(new Floor(0));
+        final Simulation aSimulation = new Simulation(floors);
 
         aSimulation.start();
 
@@ -26,11 +22,8 @@ class SimulationTest {
 
     @Test
     void testWhenStartedAlwaysSame() throws Throwable {
-        final Simulation aSimulation = new Simulation(
-            Collections.singletonList(
-                new Floor()
-            )
-        );
+        final var floors = Collections.singletonList(new Floor(0));
+        final Simulation aSimulation = new Simulation(floors);
 
         aSimulation.start();
 
@@ -41,23 +34,17 @@ class SimulationTest {
     }
 
     @Test
-    void testWhenStartedThrowsWhenNotStartedYet() {
-        final Simulation aSimulation = new Simulation(
-            Collections.singletonList(
-                new Floor()
-            )
-        );
+    void testWhenStartedThrowsWhenNotStartedYet() throws Throwable {
+        final var floors = Collections.singletonList(new Floor(0));
+        final Simulation aSimulation = new Simulation(floors);
 
         assertThrows(SimulationNotStarted.class, aSimulation::whenStarted);
     }
 
     @Test
     void testStartThrowsWhenAlreadyStarted() throws Throwable {
-        final Simulation aSimulation = new Simulation(
-            Collections.singletonList(
-                new Floor()
-            )
-        );
+        final var floors = Collections.singletonList(new Floor(0));
+        final Simulation aSimulation = new Simulation(floors);
 
         aSimulation.start();
 
@@ -66,16 +53,15 @@ class SimulationTest {
 
     @Test
     void testHasAtLeastOneFloor() {
-        final Simulation aSimulation = new Simulation(new ArrayList<>());
-
-        assertThrows(SimulationContainsNoFloors.class, aSimulation::start);
+        assertThrowsExactly(SimulationContainsNoFloors.class, () -> {
+            new Simulation(new ArrayList<>());
+        });
     }
 
     @Test
     void testFailsWhenProvidedNullFloors() {
-        // TODO: Should the constructor throw an exception here instead?
-        final Simulation aSimulation = new Simulation(null);
-
-        assertThrows(SimulationContainsNoFloors.class, aSimulation::start);
+        assertThrowsExactly(SimulationContainsNoFloors.class, () -> {
+            new Simulation(null);
+        });
     }
 }

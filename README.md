@@ -93,6 +93,10 @@ Populates people though doors on a defined schedule.
 
 Contains an initial state and series of rules that the system executes.
 
+### [Universe](./src/main/java/com/danieltedman/hoist/internal/domain/universe/)
+
+The top level coordination object that knows about all simulations.
+
 ### Gateways
 
 _Placeholder_
@@ -123,7 +127,8 @@ _Placeholder_
 
 #### [A06:2021-Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)
 
-[Snyk](https://snyk.io) and [Github Security](https://github.com/features/security) scan Gradle and NPM dependencies for know vulnerabilities and create pull requests to resolve the vulnerabilities when available.
+[Snyk](https://snyk.io) and [Github Security](https://github.com/features/security) scan Gradle and NPM dependencies for
+know vulnerabilities and create pull requests to resolve the vulnerabilities when available.
 
 #### [A07:2021-Identification and Authentication Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/)
 
@@ -143,9 +148,10 @@ _Placeholder_
 
 ## References
 
--   [2021-02-15: How can I serve static html from spring boot?](https://stackoverflow.com/questions/42393211#answer-48862637)
--   [2021-02-15: Serve Static Resources with Spring](https://www.baeldung.com/spring-mvc-static-resources)
--   [2021-02-15: Setting up esbuild for TypeScript libraries](https://jamesthom.as/2021/05/setting-up-esbuild-for-typescript-libraries/)
+-   2021-02-15: [How can I serve static html from spring boot?](https://stackoverflow.com/questions/42393211#answer-48862637)
+-   2021-02-15: [Serve Static Resources with Spring](https://www.baeldung.com/spring-mvc-static-resources)
+-   2021-02-15: [Setting up esbuild for TypeScript libraries](https://jamesthom.as/2021/05/setting-up-esbuild-for-typescript-libraries/)
+-   2022-05-29: [AssertJ Core Documentation](https://assertj.github.io/doc/)
 
 ## License
 

@@ -19,6 +19,7 @@ dependencies {
     // https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-2823313
     implementation 'org.springframework:spring-beans:5.3.20'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
 }
 
 tasks.named('test') {
