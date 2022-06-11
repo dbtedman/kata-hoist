@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
-        "jsx": "react"
+        "jsx": "react",
+        "esModuleInterop": true,
+        "strict": true
     },
-    "include": ["./src/main/ts/**/*"]
+    "include": ["./src/main/ts/**/*", "./src/test/ts/**/*"]
 }

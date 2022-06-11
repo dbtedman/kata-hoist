@@ -15,4 +15,4 @@ compile:
 	@pnpm run build && ./gradlew build
 
 test:
-	@./gradlew test
+	@pnpm run test && ./gradlew test
