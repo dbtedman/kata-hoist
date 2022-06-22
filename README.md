@@ -60,43 +60,43 @@ make test
 
 ### Domain
 
-#### [Door](./src/main/java/com/danieltedman/hoist/internal/domain/door/)
+#### [Door](./src/main/java/com/danieltedman/hoist/internal/domain/entity/door/)
 
 An entry/exit point that can be the origin or destination of a person.
 
-#### [Floor](./src/main/java/com/danieltedman/hoist/internal/domain/floor/)
+#### [Floor](./src/main/java/com/danieltedman/hoist/internal/domain/entity/floor/)
 
 One or more doors or lift doors can appear on a floor.
 
-#### [Lift Car](./src/main/java/com/danieltedman/hoist/internal/domain/liftcar/)
+#### [Lift Car](./src/main/java/com/danieltedman/hoist/internal/domain/entity/liftcar/)
 
 _Placeholder_
 
-#### [Lift Door](./src/main/java/com/danieltedman/hoist/internal/domain/liftdoor/)
+#### [Lift Door](./src/main/java/com/danieltedman/hoist/internal/domain/entity/liftdoor/)
 
 _Placeholder_
 
-#### [Lift Queue](./src/main/java/com/danieltedman/hoist/internal/domain/liftqueue/)
+#### [Lift Queue](./src/main/java/com/danieltedman/hoist/internal/domain/entity/liftqueue/)
 
 People who are waiting on a floor for a lift.
 
-#### [Lift Shaft](./src/main/java/com/danieltedman/hoist/internal/domain/liftshaft/)
+#### [Lift Shaft](./src/main/java/com/danieltedman/hoist/internal/domain/entity/liftshaft/)
 
 Lift cars move up and down in this shaft.
 
-#### [Person](./src/main/java/com/danieltedman/hoist/internal/domain/person/)
+#### [Person](./src/main/java/com/danieltedman/hoist/internal/domain/entity/person/)
 
 Someone who will use a lift.
 
-#### [Scheduler](./src/main/java/com/danieltedman/hoist/internal/domain/scheduler/)
+#### [Scheduler](./src/main/java/com/danieltedman/hoist/internal/domain/entity/scheduler/)
 
 Populates people though doors on a defined schedule.
 
-#### [Simulation](./src/main/java/com/danieltedman/hoist/internal/domain/simulation/)
+#### [Simulation](./src/main/java/com/danieltedman/hoist/internal/domain/entity/simulation/)
 
 Contains an initial state and series of rules that the system executes.
 
-### [Universe](./src/main/java/com/danieltedman/hoist/internal/domain/universe/)
+### [Universe](./src/main/java/com/danieltedman/hoist/internal/domain/entity/universe/)
 
 The top level coordination object that knows about all simulations.
 

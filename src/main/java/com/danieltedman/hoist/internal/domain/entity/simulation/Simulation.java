@@ -1,6 +1,6 @@
-package com.danieltedman.hoist.internal.domain.simulation;
+package com.danieltedman.hoist.internal.domain.entity.simulation;
 
-import com.danieltedman.hoist.internal.domain.floor.Floor;
+import com.danieltedman.hoist.internal.domain.entity.floor.Floor;
 
 import java.time.Instant;
 import java.util.List;

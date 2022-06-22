@@ -1,6 +1,10 @@
 package com.danieltedman.hoist.internal.domain.simulation;
 
-import com.danieltedman.hoist.internal.domain.floor.Floor;
+import com.danieltedman.hoist.internal.domain.entity.floor.Floor;
+import com.danieltedman.hoist.internal.domain.entity.simulation.Simulation;
+import com.danieltedman.hoist.internal.domain.entity.simulation.SimulationAlreadyStarted;
+import com.danieltedman.hoist.internal.domain.entity.simulation.SimulationContainsNoFloors;
+import com.danieltedman.hoist.internal.domain.entity.simulation.SimulationNotStarted;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;

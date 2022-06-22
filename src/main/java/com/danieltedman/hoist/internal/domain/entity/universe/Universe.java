@@ -1,6 +1,6 @@
-package com.danieltedman.hoist.internal.domain.universe;
+package com.danieltedman.hoist.internal.domain.entity.universe;
 
-import com.danieltedman.hoist.internal.domain.simulation.Simulation;
+import com.danieltedman.hoist.internal.domain.entity.simulation.Simulation;
 
 import java.util.ArrayList;
 import java.util.List;
