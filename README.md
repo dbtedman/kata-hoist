@@ -7,6 +7,7 @@
 [![sast workflow status](https://img.shields.io/github/workflow/status/dbtedman/kata-hoist/sast?style=for-the-badge&logo=github&label=sast)](https://github.com/dbtedman/kata-hoist/actions/workflows/sast.yml)
 ![languages: java and typescript](https://img.shields.io/badge/languages-java%20and%20typescript-blue.svg?style=for-the-badge)
 ![framework: react](https://img.shields.io/badge/frameworks-spring%20and%20react-blue.svg?style=for-the-badge)
+[![MIT License](https://img.shields.io/github/license/dbtedman/kata-hoist?color=orange&style=for-the-badge)](https://github.com/dbtedman/kata-hoist/blob/main/LICENSE.md)
 
 Lift simulation.
 
